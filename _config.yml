@@ -1,0 +1,50 @@
+# AeThex Documentation Site Configuration
+title: AeThex Documentation
+description: Official documentation and resources for the AeThex platform
+baseurl: ""
+url: "https://aethex-labs.github.io"
+theme: jekyll-theme-minimal
+
+# Author Information
+author:
+  name: AeThex Labs
+  url: https://aethex-labs.com
+
+# Build Settings
+markdown: kramdown
+pluginsallowed:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "doc"
+
+# Excludes
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+
+# SASS/SCSS Configuration
+sass:
+  style: compressed
+
+# GitHub Pages
+paginate: 10
